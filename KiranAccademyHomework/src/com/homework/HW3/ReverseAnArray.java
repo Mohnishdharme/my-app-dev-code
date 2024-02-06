@@ -15,13 +15,14 @@ public class ReverseAnArray {
       
         
         // Reversing the array using a for loop
-        System.out.println(length);
+       
         for (int i = 0 ; i<length/2; i++) {
         	int temp = array[i];
         	array[i] = array[length - 1 - i]; 
         	array[length - 1 - i] = temp;
         }
       
+        
         System.out.println("\nReversed array: ");
         for (int i = 0; i < length; i++) {
             System.out.print(array[i] + " ");
