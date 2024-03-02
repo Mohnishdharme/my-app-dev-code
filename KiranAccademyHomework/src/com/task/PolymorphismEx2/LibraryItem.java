@@ -1,4 +1,4 @@
-package com.task.overloadingOverridingEx2;
+package com.task.PolymorphismEx2;
 
 public class LibraryItem {
 	
