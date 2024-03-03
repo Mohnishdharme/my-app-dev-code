@@ -4,7 +4,7 @@ public class MiNaiKarat extends RuntimeException {
 	@Override
 	public String getMessage() {
 		// TODO Auto-generated method stub
-		return "Majha lawda chokajava walyano";
+		return "He kaam tumch aahe n kakaji mng mi ka karu";
 	}
 
 }
