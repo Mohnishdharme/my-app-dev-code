@@ -7,6 +7,7 @@ public class Product {
 	private String name;
 	private String description;
 	private double price;
+	private int choose;
 	
 	//default constructor
 	Product(){	
@@ -24,6 +25,18 @@ public class Product {
 	public void calculateDiscount(){
 		
 	}
+	
+	//Display information of product
+	public void displayInformation() {
+		// Display electronic product information
+        System.out.println("Electronic Product Information:");
+        System.out.println("Name: " + name);
+        System.out.println("Description: " + description);
+        System.out.println("Price: $" + price);
+        
+
+	}
+	
 	//Choose product to sell
 	public void chooseProductToSell (){
 		
@@ -34,6 +47,7 @@ public class Product {
 		//take input from user to select item to sell		
 		Scanner chooseProduct =  new Scanner(System.in);
 		int choose = chooseProduct.nextInt();
+		this.choose=choose;
 		//consume the nextline leaved 
 		chooseProduct.nextLine();
 		
@@ -43,59 +57,61 @@ public class Product {
 		
 		if (choose == 1) {
 			//enter product name
-			System.out.println("Enter produt name\n");
+			System.out.println("Enter produt name");
 			String nameOfProduct = chooseProduct.nextLine();
 			
 			//enter description of product
-			System.out.println("Enter product description\n");
+			System.out.println("Enter product description");
 			String descriptionOfProduct = chooseProduct.nextLine();
 			
 			//enter price of product 
-			System.out.println("Enter produt price\n");
+			System.out.println("Enter produt price");
 			double priceOfProduct = chooseProduct.nextDouble();
 			
 			//consume the nextline leaved 
 			chooseProduct.nextLine();
 			
 			//enter product warranty period
-			System.out.println("Enter produt Warranty in int\n");
+			System.out.println("Enter produt Warranty in int");
 			String warrantyOfProduct = chooseProduct.nextLine();
 			
 			//enter the brand of the product
-			System.out.println("Enter produt brand\n");
+			System.out.println("Enter produt brand");
 			String brandOfProduct = chooseProduct.nextLine();
 			
-			Electronic save = new Electronic( nameOfProduct, descriptionOfProduct, priceOfProduct, warrantyOfProduct, brandOfProduct  );	
+			Electronic save1 = new Electronic( nameOfProduct, descriptionOfProduct, priceOfProduct, warrantyOfProduct, brandOfProduct  );	
+			save1.displayInformation();
 		}
 		else if (choose ==2){
 			//enter product name
-			System.out.println("Enter produt name\n");
+			System.out.println("Enter produt name");
 			String nameOfProduct = chooseProduct.nextLine();
 			
 			//enter description of product
-			System.out.println("Enter product description\n");
+			System.out.println("Enter product description");
 			String descriptionOfProduct = chooseProduct.nextLine();
 			
 			//enter price of product 
-			System.out.println("Enter produt price\n");
+			System.out.println("Enter produt price");
 			double priceOfProduct = chooseProduct.nextDouble();
 			
 			//consume the nextline leaved 
 			chooseProduct.nextLine();
 			
 			//enter size of product 
-			System.out.println("Enter the size of product\n");
+			System.out.println("Enter the size of product");
 			String sizeOfProduct = chooseProduct.nextLine();
 			
 			//enter the color of the product
-			System.out.println("Enter produt color\n");
+			System.out.println("Enter produt color");
 			String colorOfProduct = chooseProduct.nextLine();
 			
 			//enter the material of the product
-			System.out.println("Enter produt material\n");
+			System.out.println("Enter produt material");
 			String materialOfProduct = chooseProduct.nextLine();
 			
 			Cloathing save = new Cloathing( nameOfProduct, descriptionOfProduct, priceOfProduct,sizeOfProduct, colorOfProduct, materialOfProduct  );	
+			save.displayInformation();
 		}
 		
 		//re-enter the value
@@ -114,6 +130,8 @@ public class Product {
 		//Take input from user to determine which product to sell and info of it
 		Product call = new Product();
 		call.chooseProductToSell();
+		
+		
 		}
 	
 }

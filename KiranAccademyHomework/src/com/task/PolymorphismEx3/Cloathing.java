@@ -14,5 +14,14 @@ public class Cloathing extends Product{
 		this.material=material;
 		
 	}
+	
+	public void displayInformation() {
+		// Display electronic product information
+        super.displayInformation();
+        System.out.println("Warranty: " + size);
+        System.out.println("Brand: " + color);
+        System.out.println("material" + material);
+
+	}
 
 }
